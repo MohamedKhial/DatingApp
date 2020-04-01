@@ -69,9 +69,7 @@ namespace DatingApp.API.Controllers {
 
             var token = tokenHandler.CreateToken (tokenDescriptor);
 
-            //var k = new SymmetricAlgorithm();
-            // var key = new SymetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSetting:Token").Value));
-            //var cards = new SigningCredentials(key,SecurityAlgorithm.Has);
+             
             return Ok (new {
                 token = tokenHandler.WriteToken (token)
             });
